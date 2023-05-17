@@ -48,7 +48,7 @@ const ExperienceCard = ({ experience }) => {
             key={`experience-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
-            {point}
+              {point.toString().includes('https://') ? <a href={point} style={{color: "cyan"}}>Link naar certificaat</a> : point}
           </li>
         ))}
       </ul>

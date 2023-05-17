@@ -7,11 +7,11 @@ const MyTable = () => {
             <thead>
             <tr>
                 <th></th>
-                <th>Managing</th>
-                <th>Analysing</th>
-                <th>Advising</th>
-                <th>Designing</th>
-                <th>Realising</th>
+                <th className="ml-1">Managing</th>
+                <th className="ml-10">Analysing</th>
+                <th className="ml-10">Advising</th>
+                <th className="ml-10">Designing</th>
+                <th className="ml-10">Realising</th>
                 <th></th>
                 <th>Personal Leadership</th>
                 <th>Targeted Interaction</th>
