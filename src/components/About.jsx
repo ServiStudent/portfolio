@@ -45,13 +45,13 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-[1100px] leading-[30px]"
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+       Mijn stageopdracht heeft als einddoel een PHP Package inclusief React front-end te realiseren die ervoor zorgt dat er meer inzicht komt in de Laravel queues en jobs.
+          Om dit te kunnen realiseren zal ik eerst een analyse moeten uitvoeren om achter de specifieke requirements te komen. Vervolgens moet ik kennis over Redis gaan
+          opdoen want dit is de database die gebruikt wordt om de queues en jobs in op te slaan. Vervolgens moet ik kennis opdoen met de programmeertaal PHP en in het specifiek
+          het Laravel framework. Ik moet met deze taal een package ontwikkelen die geïmporteerd kan worden in alle andere projecten. Ook moet ik kennis opdoen van de programmeertaal
+          Javascript en in het specifiek het React framework. Ik moet met deze taal een frontend ontwikkelen die alles vanuit de PHP package op een mooie manier visualiseert.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

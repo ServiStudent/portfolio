@@ -6,7 +6,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-
+import github2 from "../assets/github2.png";
 const ProjectCard = ({
   index,
   name,
@@ -33,9 +33,9 @@ const ProjectCard = ({
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
-                src={github}
+                src={github2}
                 alt="github"
-                className="w-1/2 h-1/2 object-contain"
+                className="object-contain"
               />
             </div>
           </div>
@@ -68,11 +68,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Hieronder vindt je een aantal producten die ik gerealiseerd heb om tot het final product te komen en uiteindelijk het final product zelf. Je kunt op de downloadknop rechtsbovenin klikken om de Github/Gitlab link te openen naar dit project.
         </motion.p>
       </div>
 

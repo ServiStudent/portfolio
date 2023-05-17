@@ -46,6 +46,7 @@ import number17 from '../assets/17.png';
 import number18 from '../assets/18.png';
 import number19 from '../assets/19.png';
 import number20 from '../assets/20.png';
+import placeholder from '../assets/jk-placeholder-image.png';
 
 export const navLinks = [
   {
@@ -407,66 +408,66 @@ const retrospectives = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "PoC 1",
     description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "xxx.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "laravel",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "redis",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: placeholder,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "PoC 2",
     description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "xxx.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "laravel",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "redis",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: placeholder,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "PoC 3",
     description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "xxx.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "laravel",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "redis",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: placeholder,
     source_code_link: "https://github.com/",
   },
 ];
