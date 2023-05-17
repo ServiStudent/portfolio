@@ -90,4 +90,4 @@ const Documents = () => {
     );
 };
 
-export default SectionWrapper(Documents, "");
+export default SectionWrapper(Documents, "documenten");

@@ -26,23 +26,51 @@ import {
 } from "../assets";
 import projectplan from '../assets/projectplan.docx.pdf';
 import onderzoeksvraag1 from '../assets/onderzoeksvraag1.pdf';
+import number1 from '../assets/number-1.png';
+import number2 from '../assets/number-2.png';
+import number3 from '../assets/number-3.png';
+import number4 from '../assets/number-4.png';
+import number5 from '../assets/number-5.png';
+import number6 from '../assets/number-6.png';
+import number7 from '../assets/number-7.png';
+import number8 from '../assets/number-8.png';
+import number9 from '../assets/number-9.png';
+import number10 from '../assets/number-10.png';
+import number11 from '../assets/number-11.png';
+import number12 from '../assets/12.png';
+import number13 from '../assets/13.png';
+import number14 from '../assets/14.png';
+import number15 from '../assets/15.png';
+import number16 from '../assets/16.png';
+import number17 from '../assets/17.png';
+import number18 from '../assets/18.png';
+import number19 from '../assets/19.png';
+import number20 from '../assets/20.png';
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: "opdracht",
+    title: "Opdracht",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "tijdlijn",
+    title: "Tijdlijn",
+  },
+  {
+    id: "producten",
+    title: "Producten",
   },
   {
     id: "retrospectives",
     title: "Retrospectives",
   },
   {
+    id: "documenten",
+    title: "Documenten",
+  },
+  {
     id: "competence",
-    title: "Competence profile",
+    title: "Competentie profiel",
   },
 ];
 
@@ -133,55 +161,223 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Item",
+    company_name: "Categorie",
+    icon: number1,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Abc.",
+      "Def.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Item",
+    company_name: "Categorie",
+    icon: number2,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number3,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number4,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number5,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number6,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number7,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number8,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number9,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number10,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number11,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number12,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number13,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number14,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number15,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number16,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number17,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number18,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number19,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
+    ],
+  },
+  {
+    title: "Item",
+    company_name: "Categorie",
+    icon: number20,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Abc.",
+      "Def.",
     ],
   },
 ];

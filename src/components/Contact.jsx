@@ -67,8 +67,8 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>My skill level</p>
-        <h3 className={styles.sectionHeadText}>Competence Profile.</h3>
+        <p className={styles.sectionSubText}>Mijn competentie niveaus</p>
+        <h3 className={styles.sectionHeadText}>Competentie Profiel.</h3>
           <MyTable/>
       </motion.div>
 

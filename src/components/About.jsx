@@ -24,7 +24,7 @@ const ServiceCard = ({ index, title, icon }) => (
         <img
           src={icon}
           alt="web-development"
-          className="w-16 h-16 object-contain"
+          className="w-100 h-100 object-contain z-10"
         />
 
         <h3 className="text-white text-[20px] font-bold text-center">
@@ -63,4 +63,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(About, "opdracht");
