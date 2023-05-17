@@ -27,6 +27,16 @@ td {
 
 }
 
+.test-glow{
+  -webkit-box-shadow: 250px -250px 500px -260px rgba(171,104,255,0.59);
+  box-shadow: 250px -250px 500px -260px rgba(171,104,255,0.59);
+}
+
+.test-glow2{
+  -webkit-box-shadow: 250px -250px 500px -260px rgba(171,104,255,0.59);
+  box-shadow: -250px -150px 500px -160px rgba(171,104,255,0.59);
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

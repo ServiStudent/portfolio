@@ -61,11 +61,11 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 w-full flex flex-col-reverse overflow-hidden`}
+      className={`xl:mt-12 w-full flex flex-col-reverse overflow-hidden test-glow2`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl test-glow2"
       >
         <p className={styles.sectionSubText}>Mijn competentie niveaus</p>
         <h3 className={styles.sectionHeadText}>Competentie Profiel.</h3>
