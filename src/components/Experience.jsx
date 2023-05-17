@@ -69,6 +69,23 @@ const Experience = () => {
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
+            <VerticalTimelineElement
+                contentStyle={{
+                    background: "rgba(29,24,54,0)",
+                    color: "rgb(255,255,255)",
+                }}
+                contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+                iconStyle={{ background: "black" }}
+                date={"07 Juli 2023"}
+                icon={
+                    <div className="flex justify-center items-center w-full h-full">
+                        <h1
+                            style={{fontSize: 44, textAlign: "center",background: "lightblue", borderRadius: 90}}
+                            className="w-[102%] h-[102%] object-contain"
+                        >✔️</h1>
+                    </div>
+                }
+            />
         </VerticalTimeline>
       </div>
     </>
