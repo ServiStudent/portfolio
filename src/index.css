@@ -13,6 +13,19 @@
   color-scheme: dark;
 }
 
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+  width: 260px !important;
+  object-fit: cover !important;
+  max-height: 240px !important;
+  overflow-y: auto;
+}
+
+td {
+  border-radius: 40px;
+  text-align: center;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

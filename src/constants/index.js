@@ -24,6 +24,8 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+import projectplan from '../assets/projectplan.docx.pdf';
+import onderzoeksvraag1 from '../assets/onderzoeksvraag1.pdf';
 
 export const navLinks = [
   {
@@ -35,27 +37,42 @@ export const navLinks = [
     title: "Work",
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: "retrospectives",
+    title: "Retrospectives",
+  },
+  {
+    id: "competence",
+    title: "Competence profile",
   },
 ];
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Requirements Research",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Redis Courses",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "PHP Package Development",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "React Frontend Development",
     icon: creator,
+  },
+];
+
+export const files = [
+  {
+    title: "Projectplan",
+    file: projectplan,
+  },
+  {
+    title: "Onderzoeksvraag: Wat zijn de huidige mogelijkheden die de Laravel Horizon package biedt?",
+    file: onderzoeksvraag1,
   },
 ];
 
@@ -169,38 +186,34 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+const retrospectives = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    retrospectiveGood: "- Achter veel theorie van Horizon gekomen en veel mogelijkheden ontdekt. - Zelfstandig werken, vragen juist formuleren voordat ik deze stel. ",
+    retrospectiveBad: "- Late reacties vanuit docent waardoor ik vastzat. (Achteraf had ik genoeg kunnen doen, m.b.t. Laravel Horizon onderzoeken). - Trage opstart van begrip van de base project, maar dit gaat steeds beter.",
+    date: "15-02-2023",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    retrospectiveGood: "- Courses snel en goed afgerond. - Heel snel om kunnen zetten naar een werkend proof of concept met basisfunctionaliteiten.",
+    retrospectiveBad: "- Te veel on-the-go gewerkt door te weinig planning vooraf. - Begonnen met testdriven development maar dit niet doorgezet.",
+    date: "02-03-2023",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    retrospectiveGood: "- Een backlog gemaakt in JIRA. - Analyseonderzoeken gedaan en ondertussen ook aan een proof of concept aan het werken.",
+    retrospectiveBad: "- Te weinig software ontwikkeld vind ik zelf. - Gedemotiveerd omdat ik een slecht begrip van package development had.",
+    date: "15-03-2023",
   },
+  {
+    retrospectiveGood: "- Veel kennis opgedaan over de mogelijkheden en beperkingen door mijn laatste proof of concept. - Veel goede moed gekregen voor de realisatiefase van het final product.",
+    retrospectiveBad: "- Backlog was te onduidelijk dus deze moet ik opnieuw gaan opstellen.",
+    date: "20-04-2023",
+  }
 ];
 
 const projects = [
   {
     name: "Car Rent",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
         name: "react",
@@ -221,7 +234,7 @@ const projects = [
   {
     name: "Job IT",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
         name: "react",
@@ -242,7 +255,7 @@ const projects = [
   {
     name: "Trip Guide",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
         name: "nextjs",
@@ -261,5 +274,27 @@ const projects = [
     source_code_link: "https://github.com/",
   },
 ];
+const documents = [
+  {
+    name: "A",
+    description:
+        "Het projectplan is een document waarin ik de context en het doel van het project omschrijf. Waarbij de laatste versie van het document gedateerd is op 14-02-2023",
+    tags: [
+      {
+        name: "analyse",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "requirements",
+        color: "green-text-gradient",
+      },
+      {
+        name: "done",
+        color: "pink-text-gradient",
+      },
+    ],
+    file: projectplan,
+  },
+];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, retrospectives, projects, documents };
