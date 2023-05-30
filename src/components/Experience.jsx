@@ -1,60 +1,130 @@
-import React from "react";
+import React, { useState } from "react";
 import {
-  VerticalTimeline,
-  VerticalTimelineElement,
+    VerticalTimeline,
+    VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-
+import { Button } from "react-bootstrap";
+import Modal from 'react-modal';
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
+import ReactPlayer from "react-player";
 
 const ExperienceCard = ({ experience }) => {
-  return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className="w-[100%] h-[100%] object-contain"
-          />
-        </div>
-      }
-    >
-      <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
-      </div>
+    const [modalOpen, setModalOpen] = useState(false);
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-              {point.toString().includes('https://') ? <a href={point} style={{color: "cyan"}}>Link naar certificaat</a> : point}
-          </li>
-        ))}
-      </ul>
-    </VerticalTimelineElement>
-  );
+    const openModal = () => {
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            background: 'black',
+            backdrop: 'black',
+        },
+    };
+
+    return (
+        <VerticalTimelineElement
+            contentStyle={{
+                background: "#1d1836",
+                color: "#fff",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+            date={experience.date}
+            iconStyle={{ background: experience.iconBg }}
+            icon={
+                <div className="flex justify-center items-center w-full h-full">
+                    <img
+                        src={experience.icon}
+                        alt={experience.company_name}
+                        className="w-[100%] h-[100%] object-contain"
+                    />
+                </div>
+            }
+        >
+            <div>
+                <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+                <p
+                    className="text-secondary text-[16px] font-semibold"
+                    style={{ margin: 0 }}
+                >
+                    {experience.company_name}
+                </p>
+                {experience.file ? (
+                    <p
+                        className="text-[#915EFF] text-[16px] font-semibold"
+                        style={{ margin: 0 }}
+                    >
+                        <a
+                            href={experience.file}
+                            download={experience.title}
+                            target="_blank"
+                        >
+                            Document: {experience.title}
+                        </a>
+                    </p>
+                ) : null}
+            </div>
+
+            <ul className="mt-5 list-disc ml-5 space-y-2">
+                {experience.points.map((point, index) => (
+                    <li
+                        key={`experience-point-${index}`}
+                        className="text-white-100 text-[14px] pl-1 tracking-wider"
+                    >
+                        {point.toString().includes("https://") ? (
+                            point.toString().includes("Course:") ? (
+                                <a href={point} style={{ color: "cyan" }}>
+                                    Link naar cursus
+                                </a>
+                            ) : (
+                                <a href={point} style={{ color: "cyan" }}>
+                                    Link naar certificaat
+                                </a>
+                            )
+                        ) : (
+                            point
+                        )}
+                    </li>
+                ))}
+            </ul>
+            {experience.points.map((point, index) =>
+                point.toString().includes("Video:") ? (
+                    <>
+                        <br />
+                        <h1 style={{ color: "cyan" }} onClick={openModal} className="cursor-pointer text-info">
+                            Klik hier voor de demo video.
+                        </h1>
+                    </>
+                ) : null
+            )}
+
+            <Modal isOpen={modalOpen} contentLabel={experience.title} style={customStyles} onRequestClose={closeModal}>
+                <h2>Demo Video voor: {experience.title}</h2>
+                <ReactPlayer playing controls url={experience.video}/>
+                <Button variant="secondary" onClick={closeModal}>
+                    Close
+                </Button>
+            </Modal>
+        </VerticalTimelineElement>
+    );
 };
+
 
 const Experience = () => {
   return (
@@ -62,6 +132,12 @@ const Experience = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Wat heb ik tot nu toe gedaan?</p>
         <h2 className={styles.sectionHeadText}>Stage Tijdlijn.</h2>
+          <motion.p
+              variants={fadeIn("", "", 0.1, 1)}
+              className="mt-4 text-secondary text-[17px] max-w-[1100px] leading-[30px]"
+          >
+              Hieronder vind je een tijdlijn van mijn stageperiode bij Scrumble. Bijgevoegd zijn de documenten die hiervoor gemaakt zijn, deze kun je downloaden door op de paarse tekst achter "Document:" te klikken.
+          </motion.p>
       </motion.div>
 
       <div className="mt-20 flex flex-col">

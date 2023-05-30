@@ -7,12 +7,16 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import github2 from "../assets/github2.png";
+import Modal from "react-modal";
+import ReactPlayer from "react-player";
+import {Button} from "react-bootstrap";
+import React from "react";
 const ProjectCard = ({
   index,
   name,
   description,
   tags,
-  image,
+  video,
   source_code_link,
 }) => {
   return (
@@ -21,24 +25,8 @@ const ProjectCard = ({
         options={{ max: 0, scale: 1, speed: 0 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full"
       >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github2}
-                alt="github"
-                className="object-contain"
-              />
-            </div>
-          </div>
+        <div className="relative max-w-[100px] max-h-[230px]">
+            <ReactPlayer width={260} height={150} controls url={video}/>
         </div>
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
@@ -68,7 +56,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Hieronder vindt je een aantal producten die ik gerealiseerd heb om tot het final product te komen en uiteindelijk het final product zelf. Je kunt op de downloadknop rechtsbovenin klikken om de Github/Gitlab link te openen naar dit project.
+          Hieronder vindt je een aantal producten die ik gerealiseerd heb om tot het final product te komen en uiteindelijk het final product zelf. Het zijn video's die je kunt starten en vergroten naar full-screen.
         </motion.p>
       </div>
 
