@@ -102,17 +102,19 @@ const ExperienceCard = ({ experience }) => {
                         )}
                     </li>
                 ))}
+                {experience.points.map((point, index) =>
+                    point.toString().includes("Video:") ? (
+                        <>
+                          <li>
+                            <h1 style={{ color: "cyan" }} onClick={openModal} className="cursor-pointer text-info">
+                                Klik hier voor de demo video.
+                            </h1>
+                          </li>
+                        </>
+                    ) : null
+                )}
             </ul>
-            {experience.points.map((point, index) =>
-                point.toString().includes("Video:") ? (
-                    <>
-                        <br />
-                        <h1 style={{ color: "cyan" }} onClick={openModal} className="cursor-pointer text-info">
-                            Klik hier voor de demo video.
-                        </h1>
-                    </>
-                ) : null
-            )}
+
 
             <Modal isOpen={modalOpen} contentLabel={experience.title} style={customStyles} onRequestClose={closeModal}>
                 <h2>Demo Video voor: {experience.title}</h2>
