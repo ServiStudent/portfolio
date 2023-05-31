@@ -33,8 +33,11 @@ const ExperienceCard = ({ experience }) => {
             bottom: 'auto',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
-            background: 'black',
+            backgroundColor: 'black',
             backdrop: 'black',
+        },
+        overlay: {
+            backgroundColor: 'rgba(0,0,0,0.8)',
         },
     };
 
@@ -89,7 +92,7 @@ const ExperienceCard = ({ experience }) => {
                     >
                         {point.toString().includes("https://") ? (
                             point.toString().includes("Course:") ? (
-                                <a href={point} style={{ color: "cyan" }}>
+                                <a href={point.replace("Course: ", "")} style={{ color: "cyan" }}>
                                     Link naar cursus
                                 </a>
                             ) : (

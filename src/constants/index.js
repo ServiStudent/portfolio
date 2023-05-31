@@ -44,6 +44,16 @@ import number17 from '../assets/17.png';
 import number18 from '../assets/18.png';
 import number19 from '../assets/19.png';
 import number20 from '../assets/20.png';
+import number21 from '../assets/21.png';
+import number22 from '../assets/22.png';
+import number23 from '../assets/23.png';
+import number24 from '../assets/24.png';
+import number25 from '../assets/25.png';
+import number26 from '../assets/26.png';
+import number27 from '../assets/27.png';
+import number28 from '../assets/28.png';
+import number29 from '../assets/29.png';
+import number30 from '../assets/30.png';
 import placeholder from '../assets/jk-placeholder-image.png';
 
 import projectplan from '../assets/documents/projectplan.docx.pdf';
@@ -55,7 +65,9 @@ import o_herbruikbare_functionaliteiten from '../assets/documents/onderzoeksvraa
 
 import demo_redis_base from '../assets/videos/demo-redis-in-base.mp4';
 import demo_redis_raw from '../assets/videos/demo-redis-raw.mp4';
+import demo_redis_query_speed from '../assets/videos/demo-redis-query-speed.mp4';
 import demo_redis_retry_poc from '../assets/videos/demo-redis-retry-poc.mp4';
+import demo_orbit_package_poc from '../assets/videos/demo-orbit-package-poc.mp4';
 
 
 
@@ -359,7 +371,7 @@ const experiences = [
       "Dit lukte, het advies wat hieruit voortkwam was het zorgen voor een abstracte job class zodat ik Redis keys zelf kan opbouwen in plaats van dat het een gewone UUID is.",
         "Video: In de video zie je een klein voorbeeld van de gegroepeerde Redis keys en de snelheid van de functie (Dit gaat om het ophalen en groeperen van rond de 400.000 keys."
     ],
-    // video: demo_redis_query_speed,
+    video: demo_redis_query_speed,
   },
   {
     title: "Proof of Concept: Package development",
@@ -369,21 +381,45 @@ const experiences = [
     date: "Mei 2023",
     points: [
       "Uit de voorgaande analyse en proof of concepts is een gesprek voortgekomen waarin ik samen met de opdrachtgever heb besloten om een package te ontwikkelen in plaats van een overkoepelende applicatie.",
-      "Video: In de video zie je een voorbeeld van een in een project geïmplementeerde package variant van Orbit.",
+      "Video: In de video zie je een voorbeeld van een in het base project geïmplementeerde package variant van Orbit. De front-end van de package is te bereiken via een admin route, de backend zit ook achter een admin middleware.",
     ],
-    // video: demo_orbit_package_poc
+    video: demo_orbit_package_poc
   },
   {
-    title: "Orbit - Final product v0.1",
+    title: "Orbit - Final product v0.1 [Demo komt nog]",
     company_name: "Workshop",
     icon: number19,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Juni 2023",
     points: [
       "Een eerste unfinished versie van mijn final product genaamd Orbit.",
-      "Video: In de video zie je een package met daarin de eerste basisfunctionaliteiten verwerkt.",
+      "Video: [Video komt nog] In de video zie je een package met daarin de eerste basisfunctionaliteiten verwerkt.",
     ],
     // video: demo_orbit_final_v_0,
+  },
+  {
+    title: "Adviesdocument: Veranderen van Laravel Horizon 'Job Payload' [Bestand komt nog]",
+    company_name: "Advies",
+    icon: number20,
+    iconBg: "#383E56",
+    date: "Juni 2023",
+    points: [
+      "Om optimale performance te waarborgen breng ik een advies uit over het veranderen van de Job Payload vanuit Laravel Horizon.",
+      "Dit adviesrapport omvat tevens adviezen over de onderhoudbaarheid.",
+        "Bestand komt nog"
+    ],
+    // file: a_job_payload,
+  },
+  {
+    title: "Testresultaten: Orbit - Final product v0.1 [Document komt nog]",
+    company_name: "Workshop",
+    icon: number21,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Validatiefase van eerste versie van Orbit.",
+      "Document komt nog.",
+    ],
   },
   // {
   //   title: "Item",
@@ -396,6 +432,106 @@ const experiences = [
   //     "Def.",
   //   ],
   // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+  // {
+  //   title: "Item",
+  //   company_name: "Categorie",
+  //   icon: number20,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Abc.",
+  //     "Def.",
+  //   ],
+  // },
+
 ];
 
 const retrospectives = [
@@ -423,20 +559,20 @@ const retrospectives = [
 
 const projects = [
   {
-    name: "PoC 1",
+    name: "PoC 1: Testapplicatie rauwe redis queries.",
     description:
-        "xxx.",
+        "Ik heb een kleine test applicatie gemaakt om te testen hoe Redis database calls precies werken.",
     tags: [
       {
-        name: "react",
+        name: "Node.js",
         color: "blue-text-gradient",
       },
       {
-        name: "laravel",
+        name: "Poc",
         color: "green-text-gradient",
       },
       {
-        name: "redis",
+        name: "Redis",
         color: "pink-text-gradient",
       },
     ],
@@ -445,20 +581,20 @@ const projects = [
     video: demo_redis_raw
   },
   {
-    name: "PoC 2",
+    name: "PoC 2: Redis in base project implementeren.",
     description:
-        "xxx.",
+        "Ik heb Redis functionaliteiten gerealiseerd binnen het base project om te kijken of het mogelijk was.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "laravel",
+        name: "Laravel",
         color: "green-text-gradient",
       },
       {
-        name: "redis",
+        name: "Redis",
         color: "pink-text-gradient",
       },
     ],
@@ -467,48 +603,71 @@ const projects = [
     video: demo_redis_base
   },
   {
-    name: "PoC 3",
+    name: "PoC 3: Retry jobs from front-end.",
     description:
-        "xxx.",
+        "Ik heb een proof of concept gemaakt om aan te tonen dat jobs vanuit de front-end opnieuw aangeroepen kunnen worden.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "laravel",
+        name: "Laravel",
         color: "green-text-gradient",
       },
       {
-        name: "redis",
+        name: "Redis",
         color: "pink-text-gradient",
       },
     ],
     image: placeholder,
     source_code_link: "https://github.com/",
-    video: demo_redis_retry_poc,
+    video: demo_redis_retry_poc
   },
   {
-    name: "PoC 3",
+    name: "PoC 4: Get redis keys & group by tag.",
     description:
-        "xxx.",
+        "Voor deze proof of concept ben ik bezig geweest met een zo snel mogelijk werkende functie schrijven om redis keys op te halen en deze te groeperen op specifieke delen.\n" +
+        "Dit lukte, het advies wat hieruit voortkwam was het zorgen voor een abstracte job class zodat ik Redis keys zelf kan opbouwen in plaats van dat het een gewone UUID is.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "laravel",
+        name: "Laravel",
         color: "green-text-gradient",
       },
       {
-        name: "redis",
+        name: "Redis",
         color: "pink-text-gradient",
       },
     ],
     image: placeholder,
     source_code_link: "https://github.com/",
-    video: demo_redis_retry_poc,
+    video: demo_redis_query_speed
+  },
+  {
+    name: "PoC 5: Package development.",
+    description:
+        "Uit de voorgaande analyse en proof of concepts is een gesprek voortgekomen waarin ik samen met de opdrachtgever heb besloten om een package te ontwikkelen in plaats van een overkoepelende applicatie.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Laravel",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Redis",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: placeholder,
+    source_code_link: "https://github.com/",
+    video: demo_orbit_package_poc
   },
 ];
 const documents = [
@@ -591,6 +750,47 @@ const documents = [
       },
     ],
     file: o_implementatiewijze,
+  },
+  {
+    name: "Wat zijn de mogelijk herbruikbare functionaliteiten vanuit Laravel Horizon?",
+    description:
+        "Laravel Horizon is een tool die ontwikkeld is voor het bijhouden van Laravel jobs en queues.\n" +
+        "Ik heb in de sourcecode gecontroleerd welke functionaliteiten ik kan hergebruiken/moet aanpassen.",
+    tags: [
+      {
+        name: "analyse",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "implementatie",
+        color: "green-text-gradient",
+      },
+      {
+        name: "done",
+        color: "pink-text-gradient",
+      },
+    ],
+    file: o_herbruikbare_functionaliteiten,
+  },
+  {
+    name: "Onderzoek naar specifieke eisen van de developers",
+    description:
+        "Ik heb met dit onderzoek geprobeerd om de requirements van het project specifieker te maken.",
+    tags: [
+      {
+        name: "analyse",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "implementatie",
+        color: "green-text-gradient",
+      },
+      {
+        name: "done",
+        color: "pink-text-gradient",
+      },
+    ],
+    file: o_specifieke_eisen,
   },
 ];
 

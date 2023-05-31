@@ -52,6 +52,7 @@ const Feedbacks = () => {
                 {retrospectives.map((retrospective, index) => (
                     <FeedbackCard key={retrospective.date} index={index} {...retrospective} />
                 ))}
+                <h1>Meer retrospectives volgen ..</h1>
             </div>
         </div>
     );
