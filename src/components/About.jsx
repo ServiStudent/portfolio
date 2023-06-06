@@ -47,24 +47,25 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-[1100px] leading-[30px]"
       >
-       Mijn stageopdracht heeft als einddoel een PHP Package inclusief React front-end te realiseren die ervoor zorgt dat er meer inzicht komt in de Laravel queues en jobs.
-          Om dit te kunnen realiseren zal ik eerst een analyse moeten uitvoeren om achter de specifieke requirements te komen.
+          <h3 className={'pb-3'} style={{fontSize: '24px', color: 'white', borderBottom: '3px solid white', marginBottom: '10px'}}>Opdrachtomschrijving</h3>
+          Het project betreft de ontwikkeling van een Laravel Horizon Insights Applicatie voor het softwarebedrijf Scrumble, deze tool zal verder op deze website ook wel Orbit genoemd worden. Het doel van het project is om een tool te ontwikkelen waarmee Scrumble inzicht kan krijgen in de fouten en problemen die optreden bij het uitvoeren van complexe asynchrone logica in hun applicaties. Momenteel maakt Scrumble gebruik van Laravel Horizon, een first-party package voor Laravel, om jobs in een queue te zetten en asynchroon af te handelen. Echter, wanneer er fouten optreden, is het lastig om inzicht te krijgen in wat er precies misgaat en waar dit gebeurt. De ontwikkelde applicatie moet automatische meldingen genereren en gedetailleerd inzicht bieden in de fouten en problemen die zich voordoen bij het uitvoeren van jobs met Laravel Horizon. Deze opdracht is een exploratieve opdracht dit houdt in dat ik een groot deel van de stageperiode bezig zal zijn met het onderzoeken en valideren van mogelijkheden.
           <br/>
           <br/>
-          Vervolgens moet ik kennis over Redis gaan
-          opdoen want dit is de database die gebruikt wordt om de queues en jobs in op te slaan. Vervolgens moet ik kennis opdoen met de programmeertaal PHP en in het specifiek
-          het Laravel framework. Ik moet met deze taal een package ontwikkelen die geïmporteerd kan worden in alle andere projecten.
+          <h3 className={'pb-3'} style={{fontSize: '24px', color: 'white', borderBottom: '3px solid white', marginBottom: '10px'}}>Doelstelling</h3>
+          Het doel van de stageopdracht is onderzoeken wat de mogelijkheden en limitaties van Laravel Horizon zijn en hierop instelen. Het uiteindelijke project is een applicatie die Scrumble in staat stelt om automatische meldingen te ontvangen en gedetailleerd inzicht te krijgen in de fouten en problemen die optreden bij het uitvoeren van jobs met Laravel Horizon. Het doel is niet om deze applicatie persé af te hebben maar om onderzocht te hebben wat er mogelijk is zodat er in de toekomst ontwikkeld kan worden met zekerheid. De applicatie moet in ieder geval de volgende functionaliteiten bieden:
           <br/>
           <br/>
-          Ook moet ik kennis opdoen van de programmeertaal
-          Javascript en in het specifiek het React framework. Ik moet met deze taal een frontend ontwikkelen die alles vanuit de PHP package op een mooie manier visualiseert.
+            <ul>
+                <li>• Het tonen van een overzicht van de jobs in de queue, de afgeronde jobs en de jobs die fout zijn gegaan.</li>
+                <li>• Het verstrekken van gedetailleerde informatie over de fouten, inclusief de locatie waar de fouten zijn opgetreden.</li>
+                <li>• Mogelijkheid om vanuit de front-end jobs opnieuw uit te voeren.</li>
+                <li>• Onderzoeken of het mogelijk is om gegevens uit meerdere Laravel Horizon-instanties samen te voegen en te analyseren óf dat het beter is om het via een package implementatie te doen.</li>
+                <li>• Het automatisch sturen van alerts wanneer er fouten optreden bij het uitvoeren van jobs met bepaalde threshholds.</li>
+                <li>• Het bieden van een gebruiksvriendelijke interface voor het beheren en configureren van deze alerts.</li>
+            </ul>
+          <br/>
+          Met het realiseren van deze doelstelling wil Scrumble een beter inzicht krijgen in de prestaties en problemen van hun applicaties die gebruikmaken van deze complexe asynchrone jobs en queues logica. Dit zal hen helpen om efficiënter te kunnen werken, problemen sneller op te lossen en de kwaliteit van hun diensten te verbeteren.
       </motion.p>
-
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
     </>
   );
 };

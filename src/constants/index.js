@@ -24,6 +24,7 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+import warning from '../assets/warning.png';
 import number1 from '../assets/number-1.png';
 import number2 from '../assets/number-2.png';
 import number3 from '../assets/number-3.png';
@@ -174,6 +175,18 @@ const technologies = [
 
 const experiences = [
   {
+    icon: warning,
+    description: "De analysefase was heel belangrijk tijdens de stageopdracht omdat de opdracht exploratief was. De requirements stonden nog niet vast of waren nog niet gevalidereerd. Ook was het belangrijk om de werkwijze van Scrumble eigen te maken en te leren werken met de technieken die zij gebruiken, omdat de applicatie die uiteindelijk opgeleverd wordt moet voldoen aan hun kwaliteitseisen. Een samenvatting van zaken die ik tijdens de analyse en vooronderzoeksfase heb uitgevoerd:",
+    phase: "Analyse/vooronderzoek",
+    points: [
+      "Redis cursussen: Scrumble werkt met Laravel Horizon die jobs op een asynchrone queue zet. Deze jobs worden opgeslagen in een Redis database, om te kunnen werken met deze jobs moet ik dus een volledig begrip hebben van hoe Redis in elkaar steekt. Ik heb er samen met mijn stagebegeleider voor gekozen om 4 Redis courses te doen en we hebben er 2 gemarkeerd als optioneel. De 4 uitgevoerden staan hieronder met daarbij een redenering. De 2 die optioneel waren, waren: Redis Security & Running Redis at scale. Deze heb ik uiteindelijk niet uitgevoerd omdat we deze nog niet nodig achtte in deze fase van de opdracht.",
+      "TDD Cursus: Scrumble werkt volgens de test driven development werkwijze, dit zorgt ervoor dat de kwaliteit van de code gewaarborgd blijft tijdens het maken van functionaliteiten en dat tevens gecontroleerd wordt of bestaande functionaliteiten nog werken.",
+      "Affiniteit krijgen met Supercharge: Supercharge is het basisproject van Scrumble. Omdat mijn applicatie moet werken samen met applicaties die gebouwd zijn vanuit dit basisproject is het belangrijk om affinitiet te krijgen met dit project. In een document wat hieronder volgt omschrijf ik wat ik heb gedaan en wat voor relevante punten Supercharge precies inhoudt.",
+      "Laravel cursus: Scrumble gebruikt voor backend development het Laravel framework, dit is een PHP framework. Mijn stagebegeleider en ik hebben samen vastgesteld dat ik nog niet genoeg ervaring met Laravel had om een correcte applicatie te ontwikkelen.",
+      "Onderzoeken: Ik heb om requirements te valideren en verder uit te zoeken verschillende onderzoeken gedaan. Deze onderzoeken staan hieronder op de tijdlijn aangegeven.",
+    ],
+  },
+  {
     title: "Project proposal",
     company_name: "Analyse",
     icon: number1,
@@ -289,6 +302,15 @@ const experiences = [
     ],
   },
   {
+    icon: warning,
+    description: "De validatiefase is eigenlijk een verlengstuk van de analysefase. Tijdens deze validatiefase controleer ik, door middel van proof of concepts, of wat ik van plan ben te realiseren op basis van de requirements ook haalbaar is. Hieruit komt een advies richting mij als developer waarin aangegeven staat welke van de initiële requirements haalbaar zijn en welke niet. Bij degene die haalbaar zijn koppel ik terug naar bewijslast waarom deze haalbaar zijn. Bij degene die niet haalbaar zijn koppel ik terug naar bewijslast waaruit blijkt dat deze niet haalbaar zijn. ",
+    phase: "Validatiefase",
+    points: [
+        "Onderzoeken: Ik heb tijdens deze fase verschillende onderzoeken gedaan om de requirements te toetsen of verder te specificeren. Verderop in de tijdlijn vind je deze onderzoeken terug met daarbij een uitleg en samengevatte conclusie.",
+        "Proof of concepts: Tijdens de validatiefase heb ik steeds proof of concepts gemaakt en deze gepresenteerd aan de opdrachtgever, hierbij hebben wij samen besproken of de requirement op deze manier vervuld kan worden of niet."
+    ],
+  },
+  {
     title: "Testapplicatie rauwe redis queries.",
     company_name: "Workshop",
     icon: number11,
@@ -386,21 +408,18 @@ const experiences = [
     video: demo_orbit_package_poc
   },
   {
-    title: "Orbit - Final product v0.1 [Demo komt nog]",
-    company_name: "Workshop",
-    icon: number19,
-    iconBg: "#383E56",
-    date: "Juni 2023",
+    icon: warning,
+    description: "De adviesfase geeft vanuit de voorgaande fases een aantal handvaten om mee te werken in de realisatiefase. Hierbij kun je denken aan het aangeven welke eigen logica er gerealiseerd moet worden, wat er vanuit Laravel Horizon hergebruikt gaat worden en wat er aangepast moet worden. Dit advies wordt zowel geuit naar de opdrachtgever als naar de developer van de package (In dit geval ben ik dat dus).",
+    phase: "Adviesfase",
     points: [
-      "Een eerste unfinished versie van mijn final product genaamd Orbit.",
-      "Video: [Video komt nog] In de video zie je een package met daarin de eerste basisfunctionaliteiten verwerkt.",
+      "Adviesdocumenten: Er zijn verschillende adviesdocumenten geschreven over herbruikbare functionaliteiten of bijvoorbeeld zelf te schrijven functionaliteiten. Je zult de documenten hieronder in de tijdlijn terugvinden.",
+      "Ontwerpschetsen: Er zijn verschillende ontwerpen gemaakt. Je kunt hierbij denken aan grove UI schetsen tot aan een positioneringsontwerp. Je zult de documenten hieronder in de tijdlijn terugvinden.",
     ],
-    // video: demo_orbit_final_v_0,
   },
   {
     title: "Adviesdocument: Veranderen van Laravel Horizon 'Job Payload' [Bestand komt nog]",
     company_name: "Advies",
-    icon: number20,
+    icon: number19,
     iconBg: "#383E56",
     date: "Juni 2023",
     points: [
@@ -409,6 +428,39 @@ const experiences = [
         "Bestand komt nog"
     ],
     // file: a_job_payload,
+  },{
+    title: "Ontwerpdocument: workflows usecases",
+    company_name: "Advies",
+    icon: number19,
+    iconBg: "#383E56",
+    date: "Juni 2023",
+    points: [
+      "Om optimale performance te waarborgen breng ik een advies uit over het veranderen van de Job Payload vanuit Laravel Horizon.",
+      "Dit adviesrapport omvat tevens adviezen over de onderhoudbaarheid.",
+      "Bestand komt nog"
+    ],
+    // file: a_job_payload,
+  },
+  {
+    icon: warning,
+    description: "Tijdens de realisatiefase wordt er met inachtneming van alle voorgaande fases een applicatie ontwikkeld om de doelstellingen van deze opdracht te vervullen. Vastgesteld is dat het volledig afmaken van deze applicatie niet gaat lukken. Om de opdracht op professionele wijze af te sluiten heb ik met mijn opdrachtgever gesproken over het doorontwikkelen en afspraken gemaakt voor deze doorontwikkeling.",
+    phase: "Realisatiefase",
+    points: [
+      "Final products: Je zult hieronder in de tijdlijn een final product zien met een demo. Dit final product is een versie 0, ofwel een versie die niet gereleased gaat worden.",
+        "Testresultaten: Het final product moet nog getest worden, dit zal gaan doormiddel van usertesting. De beoogde eindgebruikers gaan ontworpen usecases doorlopen en geven feedback door middel van een excelsheet. Deze feedback wordt uiteindelijk verwerkt in een volgende versie van de applicatie.",
+    ],
+  },
+  {
+    title: "Orbit - Final product v0.1 [Demo komt nog]",
+    company_name: "Workshop",
+    icon: number20,
+    iconBg: "#383E56",
+    date: "Juni 2023",
+    points: [
+      "Een eerste unfinished versie van mijn final product genaamd Orbit.",
+      "Video: [Video komt nog] In de video zie je een package met daarin de eerste basisfunctionaliteiten verwerkt.",
+    ],
+    // video: demo_orbit_final_v_0,
   },
   {
     title: "Testresultaten: Orbit - Final product v0.1 [Document komt nog]",
@@ -419,6 +471,17 @@ const experiences = [
     points: [
       "Validatiefase van eerste versie van Orbit.",
       "Document komt nog.",
+    ],
+  },
+  {
+    icon: warning,
+    description: "Ik heb met de opdrachtgever afgesproken om het systeem indien dit niet compleet afgerond is, verder door te ontwikkelen. Hiervoor hebben we professionele afspraken gemaakt en hebben we een definition of done vastgesteld. Definition of done:",
+    phase: "Afronding stage",
+    points: [
+      "Een composer package die geïmporteerd kan worden in projecten die draaien op Laravel 9 of 10.",
+        "De gevalideerde requirements volledig uitgewerkt.",
+        "De uitgewerkte requirements zijn door verschillende testrondes heengekomen.",
+        "De UI van de applicatie hoeft niet perfect te zijn, als de UX maar in orde is."
     ],
   },
   // {

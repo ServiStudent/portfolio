@@ -42,7 +42,56 @@ const ExperienceCard = ({ experience }) => {
     };
 
     return (
-        <VerticalTimelineElement
+        <>
+        {experience.phase ? (
+                <VerticalTimelineElement
+                    contentStyle={{
+                        background: "#4b3e8b",
+                        color: "#fff",
+                    }}
+                    contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+                    date={experience.date}
+                    iconStyle={{ background: experience.iconBg }}
+                    icon={
+                        <div className="flex justify-center items-center w-full h-full">
+                            <img
+                                style={{background: '#4b3e8b', borderRadius: '90px'}}
+                                src={experience.icon}
+                                alt={experience.company_name}
+                                className="w-[100%] h-[100%] object-contain"
+                            />
+                        </div>
+                    }
+                >
+                    <div>
+                        <h3 className="text-white text-[24px] font-bold">{experience.phase}</h3>
+                    </div>
+                    <h1>{experience.description}</h1>
+                    <ul className="mt-5 list-disc ml-5 space-y-2">
+                        {experience.points.map((point, index) => (
+                            <li
+                                key={`experience-point-${index}`}
+                                className="text-white-100 text-[14px] pl-1 tracking-wider"
+                            >
+                                {point.toString().includes("https://") ? (
+                                    point.toString().includes("Course:") ? (
+                                        <a href={point.replace("Course: ", "")} style={{ color: "cyan" }}>
+                                            Link naar cursus
+                                        </a>
+                                    ) : (
+                                        <a href={point} style={{ color: "cyan" }}>
+                                            Link naar certificaat
+                                        </a>
+                                    )
+                                ) : (
+                                    point
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+                </VerticalTimelineElement>
+            ) :
+            <VerticalTimelineElement
             contentStyle={{
                 background: "#1d1836",
                 color: "#fff",
@@ -126,7 +175,8 @@ const ExperienceCard = ({ experience }) => {
                     Close
                 </Button>
             </Modal>
-        </VerticalTimelineElement>
+        </VerticalTimelineElement>}
+            </>
     );
 };
 
@@ -146,7 +196,7 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline layout={'1-column-left'}>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
@@ -161,7 +211,7 @@ const Experience = () => {
                 icon={
                     <div className="flex justify-center items-center w-full h-full">
                         <h1
-                            style={{fontSize: 44, textAlign: "center",background: "lightblue", borderRadius: 90}}
+                            style={{fontSize: 30, textAlign: "center",background: "lightblue", borderRadius: 90}}
                             className="w-[102%] h-[102%] object-contain"
                         >✔️</h1>
                     </div>
