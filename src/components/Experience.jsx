@@ -45,6 +45,7 @@ const ExperienceCard = ({ experience }) => {
         <>
         {experience.phase ? (
                 <VerticalTimelineElement
+                    position={'left'}
                     contentStyle={{
                         background: "#4b3e8b",
                         color: "#fff",
@@ -66,6 +67,20 @@ const ExperienceCard = ({ experience }) => {
                     <div>
                         <h3 className="text-white text-[24px] font-bold">{experience.phase}</h3>
                     </div>
+                    {experience.file ? (
+                        <p
+                            className="text-[16px] font-semibold"
+                            style={{ margin: 0, color: 'cyan'}}
+                        >
+                            <a
+                                href={experience.file}
+                                download={experience.title}
+                                target="_blank"
+                            >
+                                Document: {experience.title}
+                            </a>
+                        </p>
+                    ) : null}
                     <h1>{experience.description}</h1>
                     <ul className="mt-5 list-disc ml-5 space-y-2">
                         {experience.points.map((point, index) => (
@@ -92,6 +107,7 @@ const ExperienceCard = ({ experience }) => {
                 </VerticalTimelineElement>
             ) :
             <VerticalTimelineElement
+                position={'right'}
             contentStyle={{
                 background: "#1d1836",
                 color: "#fff",
@@ -196,7 +212,7 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline layout={'1-column-left'}>
+        <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}

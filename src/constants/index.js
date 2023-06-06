@@ -64,6 +64,8 @@ import o_implementatiewijze from '../assets/documents/onderzoeksvraag-implementa
 import o_specifieke_eisen from '../assets/documents/onderzoeksvraag-specifieke-eisen.pdf';
 import o_herbruikbare_functionaliteiten from '../assets/documents/onderzoeksvraag-herbruikbaar.pdf';
 
+import t_cursussen from '../assets/documents/toelichting-cursussen.pdf';
+
 import demo_redis_base from '../assets/videos/demo-redis-in-base.mp4';
 import demo_redis_raw from '../assets/videos/demo-redis-raw.mp4';
 import demo_redis_query_speed from '../assets/videos/demo-redis-query-speed.mp4';
@@ -176,14 +178,11 @@ const technologies = [
 const experiences = [
   {
     icon: warning,
-    description: "De analysefase was heel belangrijk tijdens de stageopdracht omdat de opdracht exploratief was. De requirements stonden nog niet vast of waren nog niet gevalidereerd. Ook was het belangrijk om de werkwijze van Scrumble eigen te maken en te leren werken met de technieken die zij gebruiken, omdat de applicatie die uiteindelijk opgeleverd wordt moet voldoen aan hun kwaliteitseisen. Een samenvatting van zaken die ik tijdens de analyse en vooronderzoeksfase heb uitgevoerd:",
+    description: "De analysefase was heel belangrijk tijdens de stageopdracht omdat de opdracht exploratief was. De requirements stonden nog niet vast of waren nog niet gevalidereerd. Een samenvatting van zaken die ik tijdens de analyse en vooronderzoeksfase heb uitgevoerd:",
     phase: "Analyse/vooronderzoek",
     points: [
-      "Redis cursussen: Scrumble werkt met Laravel Horizon die jobs op een asynchrone queue zet. Deze jobs worden opgeslagen in een Redis database, om te kunnen werken met deze jobs moet ik dus een volledig begrip hebben van hoe Redis in elkaar steekt. Ik heb er samen met mijn stagebegeleider voor gekozen om 4 Redis courses te doen en we hebben er 2 gemarkeerd als optioneel. De 4 uitgevoerden staan hieronder met daarbij een redenering. De 2 die optioneel waren, waren: Redis Security & Running Redis at scale. Deze heb ik uiteindelijk niet uitgevoerd omdat we deze nog niet nodig achtte in deze fase van de opdracht.",
-      "TDD Cursus: Scrumble werkt volgens de test driven development werkwijze, dit zorgt ervoor dat de kwaliteit van de code gewaarborgd blijft tijdens het maken van functionaliteiten en dat tevens gecontroleerd wordt of bestaande functionaliteiten nog werken.",
-      "Affiniteit krijgen met Supercharge: Supercharge is het basisproject van Scrumble. Omdat mijn applicatie moet werken samen met applicaties die gebouwd zijn vanuit dit basisproject is het belangrijk om affinitiet te krijgen met dit project. In een document wat hieronder volgt omschrijf ik wat ik heb gedaan en wat voor relevante punten Supercharge precies inhoudt.",
-      "Laravel cursus: Scrumble gebruikt voor backend development het Laravel framework, dit is een PHP framework. Mijn stagebegeleider en ik hebben samen vastgesteld dat ik nog niet genoeg ervaring met Laravel had om een correcte applicatie te ontwikkelen.",
-      "Onderzoeken: Ik heb om requirements te valideren en verder uit te zoeken verschillende onderzoeken gedaan. Deze onderzoeken staan hieronder op de tijdlijn aangegeven.",
+        "Project proposal: Voor zowel school als de opdrachtgever was het belangrijk om de context en scope van het project te onderzoeken, dit vind je terug in dit document.",
+        "Onderzoeken: Ik heb verschillende onderzoeken uitgevoerd binnen deze fase, de onderzoeken kun je hieronder in de tijdlijn terugvinden."
     ],
   },
   {
@@ -193,8 +192,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Februari 2023",
     points: [
-      "Projectproposal uitgewerkt volgens de richtlijnen van school.",
-      "Projectproposal opgeleverd voor feedback aan stagebegeleider.",
+      "Ik heb het projectproposal uitgewerkt volgens de richtlijnen van school om goed de scope van de opdracht uit te werken.",
+      "Dit projectprosal heb ik opgeleverd voor feedback aan stagebegeleider en deze feedback heb ik in dit document verwerkt.",
     ],
     file: projectplan,
   },
@@ -205,8 +204,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Februari 2023",
     points: [
-      "Onderzoek gedaan naar de stakeholders van het project.",
-      "De beoogde stakeholders geplaatst binnen de stakeholder matrix (Beïnvloeder, sleutelfiguur, toeschouwer, geïnteresseerde).",
+      "Het was nodig om een onderzoek te doen naar de stakeholders voor dit project, omdat ik op basis van de stakeholders een betere inschatting kan maken van de priotisering van requirements.",
+      "Ik heb hiervoor experts geïnterviewd en gevraagd om beoogde stakeholders te omschrijven en plaatsen binnen de stakeholder matrix (Beïnvloeder, sleutelfiguur, toeschouwer, geïnteresseerde)."
     ],
     file: o_stakeholders,
   },
@@ -217,10 +216,25 @@ const experiences = [
     iconBg: "#383E56",
     date: "Februari 2023",
     points: [
-      "Onderzoek gedaan naar de huidige mogelijkheden die Laravel Horizon biedt.",
-      "Onderzoek gedaan naar hoe deze mogelijkheden aansluiten bij requirements om werk te besparen.",
+      "Het was nodig om onderzoek te doen naar de huidige mogelijkheden van de Laravel Horizon package, zodat ik kan inventariseren welke functionaliteiten ik kan hergebruiken en welke ik kan aanpassen om ze te laten werken zoals gewenst.",
+      "De vervolgstappen van dit onderzoek zijn dus het inventariseren van herbruikbare functionaliteiten en onderzoeken hoe ik bestaande functionaliteiten zodanig aan kan passen om de requirements te bereiken.",
+        "De onderzoeken die hieruit voortgekomen zijn zie je verderop in deze tijdlijn terugkomen."
     ],
     file: o_mogelijkheden,
+  },
+  {
+    icon: warning,
+    description: "Tijdens de analyse- en vooronderzoeksfase waren cursussen een belangrijk onderdeel. Dit was relevant omdat ik hierdoor kan leren werken op de manier van Scrumble en aan kwaliteitseisen kan voldoen. Ook was het belangrijk om de werkwijze van Scrumble eigen te maken en te leren werken met de technieken die zij gebruiken, omdat de applicatie die uiteindelijk opgeleverd wordt, moet voldoen aan hun kwaliteitseisen. Daarnaast is het volgens Scrumble belangrijk om een diepere kennisbasis te hebben van de context voordat je daadwerkelijk begint met realiseren om zo efficiënt mogelijk te werken.  Hieronder een kleine omschrijving van waarom ik de cursus heb gevolgd:",
+    phase: "Analyse/vooronderzoek: Cursussen",
+    points: [
+      "Redis cursussen: Scrumble werkt met Laravel Horizon die jobs op een asynchrone queue zet. Deze jobs worden opgeslagen in een Redis database, om te kunnen werken met deze jobs moet ik dus een volledig begrip hebben van hoe Redis in elkaar steekt. Ik heb er samen met mijn stagebegeleider voor gekozen om 4 Redis courses te doen en we hebben er 1 gemarkeerd als optioneel. De 4 uitgevoerden staan hieronder met daarbij een redenering. De optionele cursus was: Redis Security. Deze heb ik uiteindelijk niet uitgevoerd omdat we deze nog niet nodig achtte in deze fase van de opdracht.",
+      "TDD Cursus: Scrumble werkt volgens de test driven development werkwijze, dit zorgt ervoor dat de kwaliteit van de code gewaarborgd blijft tijdens het maken van functionaliteiten en dat tevens gecontroleerd wordt of bestaande functionaliteiten nog werken.",
+      "Affiniteit krijgen met Supercharge: Supercharge is het basisproject van Scrumble. Omdat mijn applicatie moet werken samen met applicaties die gebouwd zijn vanuit dit basisproject is het belangrijk om affinitiet te krijgen met dit project. In een document wat hieronder volgt omschrijf ik wat ik heb gedaan en wat voor relevante punten Supercharge precies inhoudt.",
+      "Laravel cursus: Scrumble gebruikt voor backend development het Laravel framework, dit is een PHP framework. Mijn stagebegeleider en ik hebben samen vastgesteld dat ik nog niet genoeg ervaring met Laravel had om een correcte applicatie te ontwikkelen.",
+      "Onderzoeken: Ik heb om requirements te valideren en verder uit te zoeken verschillende onderzoeken gedaan. Deze onderzoeken staan hieronder op de tijdlijn aangegeven.",
+    ],
+    file: t_cursussen,
+    title: "Toelichting cursussen"
   },
   {
     title: "Redis cursus",
