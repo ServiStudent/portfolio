@@ -65,6 +65,7 @@ import o_specifieke_eisen from '../assets/documents/onderzoeksvraag-specifieke-e
 import o_herbruikbare_functionaliteiten from '../assets/documents/onderzoeksvraag-herbruikbaar.pdf';
 
 import t_cursussen from '../assets/documents/toelichting-cursussen.pdf';
+import t_affiniteit from '../assets/documents/toelichting-affiniteit.pdf';
 
 import demo_redis_base from '../assets/videos/demo-redis-in-base.mp4';
 import demo_redis_raw from '../assets/videos/demo-redis-raw.mp4';
@@ -243,6 +244,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "Februari 2023",
     points: [
+        "De applicatie die ik uiteindelijk moet realiseren werkt nauw samen met Redis. Redis is namelijk de door Scrumble gekozen queue driver. Dit houdt in dat Redis de database is waarin alles wordt opgeslagen met betrekking tot jobs en queues. Zelf had ik nog geen ervaring met werken met Redis en daarom leek het de stagebegeleider en mij verstandig om een cursus over de basisprincipes van Redis te volgen.",
       "Certificaat behaald voor Redis cursus: RU101: Introduction to Redis Data Structures.",
       "https://university.redis.com/certificates/ffa5d2358dc04fc6a5ecfaf8cb84d56f",
     ],
@@ -254,6 +256,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "Februari 2023",
     points: [
+        "De applicatie die ik uiteindelijk ga ontwikkelen, moet queries doen naar de Redis database om de juiste data op te halen. De manier hoe ik deze data moet ophalen is afhankelijk van het datatype, deze cursus gaat dieper in op aanpasbare verzoeken die ik naar de Redis database kan sturen om uiteindelijk een goede dataset terug te krijgen.",
       "Certificaat behaald voor Redis cursus: RU203: Querying, Indexing, and Full-Text Search.",
       "https://university.redis.com/certificates/27a465db9fa043e9a5b51da188f13094",
     ],
@@ -265,6 +268,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "Maart 2023",
     points: [
+        "De applicatie die ik moet ontwikkelen heeft als non-functional requirement dat de performance zo optimaal mogelijk moet zijn. Om deze requirement ter harte te nemen hebben mijn stagebegeleider en ik ervoor gekozen dat ik cursus kan volgen. Deze cursus gaat dieper in op de methodes om data op een zo efficiënt mogelijke manier op te slaan en op te halen uit een Redis Database.",
       "Certificaat behaald voor Redis cursus: RU204: Storing, Querying, and Indexing JSON at Speed.",
       "https://university.redis.com/certificates/e68cdafceec84a70b6baed5361a007f9",
     ],
@@ -276,6 +280,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "Maart 2023",
     points: [
+        "Met dezelfde reden als de hierboven uitgewerkte cursus, hebben mijn stagebegeleider en ik bepaald dat deze cursus handig kan zijn in het geval dat ik het systeem als microservice ga realiseren. In deze cursus leer je namelijk zaken als data persistence bij opschalen en hoe opschalen met Redis databases in zijn werk gaat.",
       "Certificaat behaald voor Redis cursus: RU301: Running Redis at Scale.",
       "https://university.redis.com/certificates/914f8f0a55b0489c80457746f83341d8",
     ],
@@ -287,7 +292,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "Maart 2023",
     points: [
-      "Scrumble werkt test driven, dit betekent dat ik dit proces binnen Laravel(PHP) eigen moet maken.",
+      "Scrumble werkt al een lange tijd volgens de \"Test Driven Development\" -methodiek. Dit houdt in dat er tests geschreven worden waarin de uitkomst van functionaliteiten vooraf bepaald worden, vervolgens wordt er een functie ontwikkeld die voldoet aan deze uitkomst. Hierdoor werk je dus naar een uitkomst toe in plaats van on-the-go. Deze cursus is gericht op TDD in Laravel met het gebruik van het Laravel/PHP test framework PHPunit. Dit sluit naadloos aan bij de stack die Scrumble hanteert.",
       "Ik heb hiervoor een test driven development cursus gevolgd van",
       "Course: https://course.testdrivenlaravel.com/.",
     ],
@@ -299,7 +304,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "Maart 2023",
     points: [
-      "Scrumble werkt met het PHP framework genaamd Laravel, om hier vaardig in te worden heb ik op aanraden van de lead developers een cursus gevolgd.",
+      "Ondanks dat Scrumble momenteel applicaties ontwikkeld in Laravel 9 en 10, is deze cursus nog steeds relevant binnen de onboarding van Scrumble. Ik had nog niet genoeg ervaring met PHP/Laravel om een volledig werkende applicatie op te zetten en daarom was het relevant om deze cursus uit te voeren.",
       "Deze cursus heer Laravel 8 From Scratch en is van Laracasts:",
       "Course: https://laracasts.com/series/laravel-8-from-scratch/",
     ],
@@ -311,9 +316,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "Maart 2023",
     points: [
-      "Scrumble heeft een base project waarop alle systemen gebouwd worden, om een goede stage door te lopen moet ik affiniteit krijgen met dit systeem.",
-      "Ik heb de tijd gekregen om een kleine test casus uit te werken om bekend te worden met de codestyle en structuur van Scrumble.",
+      "Tijdens de analyse- en vooronderzoeksfase was het eigen maken van de Scrumble werkwijze een belangrijk onderdeel. Een van de zaken waar ik affiniteit mee moet krijgen is het basisproject genaamd Supercharge. Supercharge is een project wat door de jaren dat Scrumble bestaat heen gebouwd is. Hierdoor kan Scrumble elke applicatie bouwen vanaf een bepaalde basis, waar iedereen binnen het bedrijf mee bekend is. Mijn applicatie moet een connectie maken met de applicaties die zijn voortgebouwd op dit basisproject. Daarom is het relevant dat ik affiniteit krijg met het basisproject.",
+      "Om te weten hoe de huidige applicaties met jobs en queues omgaan, moet ik affiniteit krijgen met Supercharge. Een van de grootste doelstellingen is ontdekken hoe mijn applicatie gaat interacteren met applicaties die gebouwd zijn op Supercharge, zodat ik vanuit daar weer een proof of concept kan ontwikkelen met hoe de interactie tussen de 2 gerealiseerd kan worden.",
     ],
+    file: t_affiniteit,
   },
   {
     icon: warning,
@@ -331,7 +337,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Maart 2023",
     points: [
-      "Ik heb een kleine test applicatie gemaakt om te testen hoe Redis database calls precies werken.",
+      "Om te ontdekken hoe ik met Redis zou kunnen werken in een programmeeromgeving heb ik een proof of concept gemaakt waarbij ik ging controleren of ik items kon opslaan, ophalen en met behulp van parameters op kan halen uit/naar een Redis database. Ik heb de keuze gemaakt om deze proof of concept te ontwikkelen in een taal waar ik al iets meer thuis in was dus het is een Node.js applicatie geworden. Op de video die je in de tijdlijn kunt vinden zie je uitgewerkte code om bovenstaande functionaliteiten te bereiken. In deze video zie je dus de uitwerken van functionaliteiten waarbij je kunt zien dat mijn Node.js applicatie een connectie maakt met de Redis database en gegevens ophaalt.",
+        "Door het maken van dit proof of concept heb ik bewezen dat ik kan werken met een Redis connectie. Ik heb tevens ontdekt dat je een externe package nodig hebt om een verbinding te leggen met Redis databases.",
       "Video: Demo van de rauwe redis queries.",
     ],
     video: demo_redis_raw
@@ -343,7 +350,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "April 2023",
     points: [
-      "Ik heb Redis functionaliteiten gerealiseerd binnen het base project om te kijken of het mogelijk was.",
+      "Om te onderzoeken of ik het Redis kan gebruiken binnen de huidige stack van Scrumble ga ik een proof of concept maken waarbij ik een aantal Redis functionaliteiten binnen het basisproject van Scrumble (Supercharge) ga implementeren. In de video zie je dat ik een tabel heb met hierin een redisconnectie (Dat is in deze context de prefix van de jobs in de redis database). Vervolgens zie je dat ik RedisInsights open, dit is een soort database monitor voor Redis databases, ik open deze om aan te tonen dat er daadwerkelijk jobs in de database staan. Ik open vervolgens 1 van de redis connecties om daarmee alle jobs die beginnen met deze prefix op te halen door middel van een Redis call die ik in de backend geschreven heb. In de video laat ik zien dat je vanuit de front end een job kan zoeken binnen de tabel met gebruik van front end filtering. Tevens laat ik in deze video zien dat ik door middel van een zelfgeschreven functie de gegevens van een specifieke job kan ophalen en omvormen naar leesbare frontend.  Ook zie je bovenin het scherm 3 kaarten met daarop wat statistieken, deze haal ik tevens op met een zelfgeschreven Redis call in de backend. Verderop in de video laat ik zien dat deze kaarten ook elke 10 seconden gerefreshed worden door mijn queue worker aan te zetten die jobs gaat afhandelen.",
+        "Door het maken van deze proof of concept heb ik gebruikgemaakt van de Predis package om backend calls naar de Redis database te maken. Ook heb ik geleerd om een queue worker aan te zetten. Verder heb ik geleerd hoe ik door middel van Axios deze backend calls kan maken vanuit de frontend en hoe ik door middel van React useEffect een call op een interval kan zetten. Daarnaast heb ik leren werken met de Scrumble quick table (Dit is een react bootstrap table met betere typing checks en filtering opties)",
       "Video: Demo van implementatie van redis functionaliteiten in base project.",
     ],
     video: demo_redis_base
@@ -355,7 +363,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "April 2023",
     points: [
-      "Ik heb een proof of concept gemaakt om aan te tonen dat jobs vanuit de front-end opnieuw aangeroepen kunnen worden.",
+      "Ik heb een proof of concept gemaakt waarbij ik door middel van het gebruik van bestaande Laravel Horizon functionaliteiten jobs opnieuw kan proberen vanuit de front-end wanneer deze gefaald zijn. Dit was een requirement omdat dit in de huidige Laravel Horizon frontend ook mogelijk was, echter wilde de developers niet steeds van frontend wisselen én kunnen ze op de manier zoals getoond in mijn proof of concept dus filteren door middel van de tabel en vervolgens een specifieke gevonden job opnieuw uitvoeren.",
+        "Ik ben erachter gekomen hoe ik bestaande Laravel Horizon functionaliteiten kan hergebruiken in mijn frontend om zo aan de requirements vanuit Scrumble te voldoen en de user experience beter te maken. Ik kan nu door middel van zelfgeschreven backend jobs ophalen, deze filteren in de frontend en een betreffende job opnieuw starten. Ik kan ook alle jobs met een bepaalde prefix opnieuw starten met een knop die je in de video aan de bovenkant ziet.",
       "Video: Demo van de proof of concept.",
     ],
     video: demo_redis_retry_poc
