@@ -66,6 +66,7 @@ import o_herbruikbare_functionaliteiten from '../assets/documents/onderzoeksvraa
 
 import t_cursussen from '../assets/documents/toelichting-cursussen.pdf';
 import t_affiniteit from '../assets/documents/toelichting-affiniteit.pdf';
+import t_poc from '../assets/documents/toelichting-proofofconcepts.pdf';
 
 import demo_redis_base from '../assets/videos/demo-redis-in-base.mp4';
 import demo_redis_raw from '../assets/videos/demo-redis-raw.mp4';
@@ -329,6 +330,8 @@ const experiences = [
         "Onderzoeken: Ik heb tijdens deze fase verschillende onderzoeken gedaan om de requirements te toetsen of verder te specificeren. Verderop in de tijdlijn vind je deze onderzoeken terug met daarbij een uitleg en samengevatte conclusie.",
         "Proof of concepts: Tijdens de validatiefase heb ik steeds proof of concepts gemaakt en deze gepresenteerd aan de opdrachtgever, hierbij hebben wij samen besproken of de requirement op deze manier vervuld kan worden of niet."
     ],
+    file: t_poc,
+    title: "Toelichting 5 proof of concepts"
   },
   {
     title: "Testapplicatie rauwe redis queries.",
@@ -376,8 +379,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "April 2023",
     points: [
-      "Ik heb gekeken naar wat de beste implementatiewijze zou zijn voor Orbit.",
-      "Dit heb ik gedaan door middel van bibliotheek onderzoek en performance testing van proof of concept.",
+      "Het doel is om een eigen variant van Laravel Horizon te ontwikkelen die wel het inzicht en de gebruiksvriendelijkheid biedt wat de developers van Scrumble vereisen.  Het is echter nog niet bekend wat de einddoelstellingen van het project nou precies inhouden, dit moet nog verder onderzocht/aangevuld worden als de mogelijkheden van het project verder onderzocht zijn.\n" +
+      "Het doel van dit onderzoek staat echter wel vast. Dit doel is namelijk vaststellen welke implementatiemogelijkheden er zijn en op welke wijze Orbit geïmplementeerd kan worden. Moet dit door middel van een package implementatie of moet Orbit een op zichzelf draaiende applicatie worden waarin alle data van andere Scrumble applicaties verzameld wordt?\n",
+      "De mogelijke implementatiewijzes die hieruit voortkwamen waarom ófwel een PHP Package of een gehele webapplicatie. Uiteindelijk is er in overleg met de opdrachtgever gekozen voor de PHP Package implementatie.",
     ],
     file: o_implementatiewijze,
   },
@@ -388,7 +392,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "April 2023",
     points: [
-      "Ik heb met dit onderzoek geprobeerd om de requirements van het project specifieker te maken.",
+      "Het doel is om een eigen variant van Laravel Horizon te ontwikkelen die wel het inzicht en de gebruiksvriendelijkheid biedt wat de ontwikkelaars van Scrumble vereisen. Het is echter nog niet bekend wat de einddoelstellingen van het project nou precies inhouden, dit moet nog verder onderzocht/aangevuld worden als de mogelijkheden van het project verder onderzocht zijn. Dit komt omdat er eerst technisch uitgezocht moet worden wat de mogelijkheden en beperkingen zijn.",
       "De eindconclusie is dat de requirements eigenlijk nog steeds open zijn voor interpretatie en deze tijdens de realisatiefase verder vastgesteld worden.",
     ],
     file: o_specifieke_eisen,
@@ -400,8 +404,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Mei 2023",
     points: [
-      "Laravel Horizon is een tool die ontwikkeld is voor het bijhouden van Laravel jobs en queues.",
-      "Ik heb in de sourcecode gecontroleerd welke functionaliteiten ik kan hergebruiken/moet aanpassen.",
+      "Het doel van dit onderzoek is ontdekken welke functionaliteiten vanuit de huidige Laravel Horizon versie ik kan hergebruiken om requirements te vervullen. Met hergebruiken bedoel ik het letterlijk aanroepen van deze functionaliteiten. Het kan ook zijn dat ik constateer dat ik functies van scratch schrijf waarbij ik Laravel Horizon functionaliteiten extend in de backend.",
+      "Ik heb in de sourcecode van Laravel Horizon gecontroleerd welke functionaliteiten ik kan hergebruiken/moet aanpassen.",
     ],
     file: o_herbruikbare_functionaliteiten,
   },
@@ -412,8 +416,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "Mei 2023",
     points: [
-      "Voor deze proof of concept ben ik bezig geweest met een zo snel mogelijk werkende functie schrijven om redis keys op te halen en deze te groeperen op specifieke delen.",
-      "Dit lukte, het advies wat hieruit voortkwam was het zorgen voor een abstracte job class zodat ik Redis keys zelf kan opbouwen in plaats van dat het een gewone UUID is.",
+      "Om gebruiksvriendelijker te kunnen filteren door de jobs in de front-end werd het idee geopperd om redis keys op te halen op een nieuwe manier en vervolgens te groeperen op tag. Dit idee komt voort uit een nieuwe implementatie van redis keys binnen een ander project van Scrumble waarbij de queue naam in de key meegegeven wordt. Mijn opdracht was nu aantonen dat deze key met hoge performance te splitsen was en vervolgens te groeperen. In de video zie je een dataset van 400000 redis keys die binnen 0.7 seconden gegroepeerd naar de frontend gestuurd worden. Ook toon ik in de video een optie om alles binnen deze groep te tonen en een mogelijkheid om op zowel groep als key te filteren in de frontend.",
+        "Het uiteindelijke doel was voornamelijk het sneller maken van de functionaliteit bij grotere datasets. Bij de voorheen uitgevoerde proof of concepts ging de snelheid van het ophalen van Redis keys erg achteruit naarmate er meer keys waren. Vanaf 100000 keys werd het zelfs onmogelijk omdat er dan een timeout optrad. De functie die ik voor dit proof of concept heb geschreven lost dit probleem dus zeker op. ",
+      "De conclusie hier is dus zorgen dat alle applicaties die gebruik gaan maken van Orbit voorzien worden van een abstracte job class zodat ik Redis keys zelf kan opbouwen in plaats van dat het een gewone UUID is, waardoor het ophalen sneller kan en groeperen zeer makkelijk wordt.",
         "Video: In de video zie je een klein voorbeeld van de gegroepeerde Redis keys en de snelheid van de functie (Dit gaat om het ophalen en groeperen van rond de 400.000 keys."
     ],
     video: demo_redis_query_speed,
@@ -425,8 +430,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Mei 2023",
     points: [
-      "Uit de voorgaande analyse en proof of concepts is een gesprek voortgekomen waarin ik samen met de opdrachtgever heb besloten om een package te ontwikkelen in plaats van een overkoepelende applicatie.",
-      "Video: In de video zie je een voorbeeld van een in het base project geïmplementeerde package variant van Orbit. De front-end van de package is te bereiken via een admin route, de backend zit ook achter een admin middleware.",
+      "Uit gesprekken met mijn opdrachtgever en resultaten van voorgaande proof of concepts hebben we besloten Orbit als package te realiseren in plaats van gehele applicatie. Hierdoor veranderen er wat zaken, ik moet laten zien dat er een php package gerealiseerd kan worden waarbij gegevens uit de applicatie zelf gehaald worden. Ik moet aantonen dat er React frontend in de package meegestuurd kan worden die ingeladen wordt in de hoofd applicatie. Ook moet ik bestaande Laravel Horizon classes kunnen overschrijven met eigen logica binnen mijn package. In de video zie je een voorbeeld van een in het base project geïmplementeerde package variant van Orbit. De front-end van de package is te bereiken via een admin route, de backend zit ook achter een admin middleware.",
+      "Ik heb ontdekt hoe ik een PHP package kan maken en hoe ik front-end ontwikkel en deze in de moederapplicatie kan gebruiken zonder grote aanpassingen in de applicatie. Ook heb ik ontdekt hoe ik gebruik kan maken van Laravel Horizon functionaliteiten en hoe ik deze kan overschrijven met eigen logica.",
     ],
     video: demo_orbit_package_poc
   },

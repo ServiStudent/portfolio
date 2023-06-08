@@ -69,6 +69,7 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Mijn competentie niveaus</p>
         <h3 className={styles.sectionHeadText}>Competentie Profiel.</h3>
+          <h3>Het competentieprofiel wat je hieronder ziet is het competentieprofiel wat ik vanuit semester 7 meeneem naar mijn afstudeerperiode. Tijdens mijn afstudeerperiode ben ik voornamelijk bezig in het software gedeelte waarbij de taken Analyse, advies en realiseren centraal staan.</h3>
           <MyTable/>
       </motion.div>
 
