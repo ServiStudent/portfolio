@@ -67,6 +67,7 @@ import o_herbruikbare_functionaliteiten from '../assets/documents/onderzoeksvraa
 import t_cursussen from '../assets/documents/toelichting-cursussen.pdf';
 import t_affiniteit from '../assets/documents/toelichting-affiniteit.pdf';
 import t_poc from '../assets/documents/toelichting-proofofconcepts.pdf';
+import t_ontwerp from '../assets/documents/toelichting-ontwerp.pdf';
 
 import demo_redis_base from '../assets/videos/demo-redis-in-base.mp4';
 import demo_redis_raw from '../assets/videos/demo-redis-raw.mp4';
@@ -96,6 +97,10 @@ export const navLinks = [
   {
     id: "documenten",
     title: "Documenten",
+  },
+  {
+    id: "evaluatie",
+    title: "Evaluatie",
   },
   {
     id: "competence",
@@ -432,6 +437,7 @@ const experiences = [
     points: [
       "Uit gesprekken met mijn opdrachtgever en resultaten van voorgaande proof of concepts hebben we besloten Orbit als package te realiseren in plaats van gehele applicatie. Hierdoor veranderen er wat zaken, ik moet laten zien dat er een php package gerealiseerd kan worden waarbij gegevens uit de applicatie zelf gehaald worden. Ik moet aantonen dat er React frontend in de package meegestuurd kan worden die ingeladen wordt in de hoofd applicatie. Ook moet ik bestaande Laravel Horizon classes kunnen overschrijven met eigen logica binnen mijn package. In de video zie je een voorbeeld van een in het base project geïmplementeerde package variant van Orbit. De front-end van de package is te bereiken via een admin route, de backend zit ook achter een admin middleware.",
       "Ik heb ontdekt hoe ik een PHP package kan maken en hoe ik front-end ontwikkel en deze in de moederapplicatie kan gebruiken zonder grote aanpassingen in de applicatie. Ook heb ik ontdekt hoe ik gebruik kan maken van Laravel Horizon functionaliteiten en hoe ik deze kan overschrijven met eigen logica.",
+      "Video: In de video zie je voorbeeld van een PHP Package implementatie waarbij de backend en frontend die je ziet beiden vanuit de package komen, maar alsnog in de hoofdapplicatie gebruikt kunnen worden.",
     ],
     video: demo_orbit_package_poc
   },
@@ -463,11 +469,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "Juni 2023",
     points: [
-      "Om optimale performance te waarborgen breng ik een advies uit over het veranderen van de Job Payload vanuit Laravel Horizon.",
-      "Dit adviesrapport omvat tevens adviezen over de onderhoudbaarheid.",
-      "Bestand komt nog"
+      "Door middel van verschillende ontwerptechnieken wil ik op visuele wijze een duidelijk beeld geven van de volgende zaken: Waar staat Orbit gepositioneerd binnen de workflow van Scrumble? Wat is de workflow van Orbit zelf? Hoe is de databasestructuur van Orbit opgebouwd? Met gebruik van welke software architectuur is Orbit gebouwd?\n",
+      "Door middel van het beantwoorden van deze vragen met zowel ontwerptekeningen als tekstuele uitleg wil ik meer context bieden aan lezers.",
     ],
-    // file: a_job_payload,
+    file: t_ontwerp,
   },
   {
     icon: warning,
@@ -627,25 +632,74 @@ const experiences = [
 
 const retrospectives = [
   {
-    retrospectiveGood: "- Achter veel theorie van Horizon gekomen en veel mogelijkheden ontdekt. - Zelfstandig werken, vragen juist formuleren voordat ik deze stel. ",
-    retrospectiveBad: "- Late reacties vanuit docent waardoor ik vastzat. (Achteraf had ik genoeg kunnen doen, m.b.t. Laravel Horizon onderzoeken). - Trage opstart van begrip van de base project, maar dit gaat steeds beter.",
+    keep: "Achter veel theorie van Horizon gekomen en veel mogelijkheden ontdekt.\n" +
+        "\n" +
+        "Houd het verkennen en begrijpen van de theorie van Horizon als een positief aspect dat behouden moet blijven. Blijf op de hoogte van de nieuwste ontwikkelingen en leer constant bij over Horizon.\n" +
+        "Overweeg het delen van je bevindingen en inzichten met het team om de kennis te verspreiden.\n" +
+        "Zelfstandig werken, vragen juist formuleren voordat ik deze stel.\n" +
+        "\n" +
+        "Waardeer de mogelijkheid om zelfstandig te werken en het vermogen om vragen goed te formuleren voordat ze gesteld worden.\n" +
+        "Moedig andere teamleden aan om ook zelfstandig te werken en aandacht te besteden aan het formuleren van duidelijke vragen.\n ",
+    stop: "Late reacties vanuit docent waardoor ik vastzat. (Achteraf had ik genoeg kunnen doen, m.b.t. Laravel Horizon onderzoeken).\n" +
+        "\n" +
+        "Identificeer de late reacties van de docent als een obstakel dat moet worden aangepakt. Streef naar een betere communicatie en snellere feedback van de docent.\n" +
+        "Overweeg het zoeken naar alternatieve bronnen of het aanspreken van andere teamleden voor ondersteuning wanneer je vastloopt.\n" +
+        "Trage opstart van begrip van het base project, maar dit gaat steeds beter.\n" +
+        "\n" +
+        "Erken de uitdagingen bij het begrijpen van het base project in het begin, maar merk op dat het begrip geleidelijk verbetert.\n" +
+        "Streef ernaar om het proces van het begrijpen van nieuwe projecten te versnellen. Overweeg betere documentatie of overleg met collega's om sneller up-to-speed te komen.",
+    start: "Regelmatig overleg met de docent plannen om vragen en knelpunten te bespreken.\n" +
+        "\n" +
+        "Begin met het inplannen van regelmatige overlegmomenten met de docent om vragen, knelpunten en voortgang te bespreken. Dit zal helpen bij het verminderen van vertragingen en het verkrijgen van snellere feedback.\n" +
+        "Actiever deelnemen aan de kennisdeling binnen het team.\n" +
+        "\n" +
+        "Start met actief bijdragen aan de kennisdeling binnen het team. Deel je ontdekkingen en ervaringen met Laravel Horizon om anderen te helpen en de teamkennis te vergroten.\n" +
+        "Implementeer een gestructureerd plan voor het begrijpen van nieuwe projecten.\n" +
+        "\n" +
+        "Begin met het opstellen van een gestructureerd plan voor het begrijpen van nieuwe projecten. Dit kan het raadplegen van documentatie, het volgen van tutorials of het inplannen van overleg met collega's omvatten. Dit zal helpen om een snellere opstart mogelijk te maken.",
     date: "15-02-2023",
   },
   {
-    retrospectiveGood: "- Courses snel en goed afgerond. - Heel snel om kunnen zetten naar een werkend proof of concept met basisfunctionaliteiten.",
-    retrospectiveBad: "- Te veel on-the-go gewerkt door te weinig planning vooraf. - Begonnen met testdriven development maar dit niet doorgezet.",
+    keep: "Courses snel en goed afgerond.\n" +
+        "Waardeer het vermogen om cursussen snel en efficiënt af te ronden. Blijf zoeken naar mogelijkheden om jezelf bij te scholen en blijf de voortgang op dit gebied behouden.\n" +
+        "Heel snel om kunnen zetten naar een werkend proof of concept met basisfunctionaliteiten.\n" +
+        "Identificeer het vermogen om snel een werkend proof of concept met basisfunctionaliteiten te ontwikkelen als een positief aspect dat behouden moet blijven. Streef naar het behouden van deze efficiëntie in de ontwikkelingsprocessen.\n",
+    stop: "Te veel on-the-go gewerkt door te weinig planning vooraf.\n" +
+        "Erken dat het werken op basis van on-the-go beslissingen door gebrek aan planning een negatief aspect was. Streef naar het implementeren van een betere planningsaanpak om een gestructureerdere ontwikkelingsaanpak te waarborgen.\n" +
+        "Begonnen met testdriven development maar dit niet doorgezet.\n" +
+        "Erken dat het niet doorzetten van test-driven development als een obstakel kan worden beschouwd. Overweeg om de voordelen van test-driven development te heroverwegen en te streven naar een consistentere implementatie van test-driven development in toekomstige projecten.\n",
+    start: "Meer tijd besteden aan het plannen en voorbereiden van ontwikkelingswerkzaamheden.\n" +
+        "Begin met het toewijzen van voldoende tijd aan het plannen en voorbereiden van ontwikkelingswerkzaamheden. Dit zal helpen bij het verminderen van on-the-go beslissingen en het bevorderen van een gestructureerdere aanpak.\n" +
+        "Onderzoeken hoe test-driven development kan worden geïntegreerd in het ontwikkelingsproces.\n" +
+        "Start met het onderzoeken van de voordelen en methoden van test-driven development en implementeer het consequent in toekomstige projecten.",
     date: "02-03-2023",
   },
   {
-    retrospectiveGood: "- Een backlog gemaakt in JIRA. - Analyseonderzoeken gedaan en ondertussen ook aan een proof of concept aan het werken.",
-    retrospectiveBad: "- Te weinig software ontwikkeld vind ik zelf. - Gedemotiveerd omdat ik een slecht begrip van package development had.",
+    keep: "Een backlog gemaakt in JIRA.\n" +
+        "Houd het gebruik van een backlog in JIRA als een positief aspect dat behouden moet blijven. Blijf de backlog gebruiken om het werk te plannen en de voortgang te volgen.\n" +
+        "Analyseonderzoeken gedaan en ondertussen ook aan een proof of concept aan het werken.\n" +
+        "Erken de waarde van het uitvoeren van analyseonderzoeken en het parallel werken aan een proof of concept. Blijf deze aanpak volgen om een solide basis te leggen voor de ontwikkeling.",
+    stop: "Te weinig software ontwikkeld vind ik zelf.\n" +
+        "Erken dat het gevoel van te weinig software ontwikkelen een negatief aspect is. Streef naar het bepalen van realistische doelen en het effectiever plannen van ontwikkelingstaken om de productiviteit te verhogen.\n" +
+        "Gedemotiveerd omdat ik een slecht begrip van package development had.\n" +
+        "Identificeer het gebrek aan begrip van package development als een obstakel dat gedemotiveerdheid veroorzaakt. Streef naar het vergroten van je begrip door middel van zelfstudie, mentorship of het raadplegen van andere bronnen.",
+    start: "Regelmatig feedbackmomenten organiseren om de voortgang te bespreken en mogelijke aanpassingen te maken.\n" +
+        "Begin met het organiseren van regelmatige feedbackmomenten om de voortgang te bespreken en mogelijke aanpassingen aan de ontwikkeling aan te brengen. Dit zal helpen bij het vergroten van de productiviteit en motivatie.\n" +
+        "Gerichte studie en oefening in package development om het begrip te vergroten.\n" +
+        "Begin met het gericht bestuderen en oefenen van package development om je begrip te vergroten. Zoek naar relevante bronnen en oefenmateriaal om je vaardigheden op dit gebied te verbeteren.",
     date: "15-03-2023",
   },
   {
-    retrospectiveGood: "- Veel kennis opgedaan over de mogelijkheden en beperkingen door mijn laatste proof of concept. - Veel goede moed gekregen voor de realisatiefase van het final product.",
-    retrospectiveBad: "- Backlog was te onduidelijk dus deze moet ik opnieuw gaan opstellen.",
+    keep: "Veel kennis opgedaan over de mogelijkheden en beperkingen door mijn laatste proof of concept.\n" +
+        "Waardeer het opdoen van veel kennis over de mogelijkheden en beperkingen door je laatste proof of concept. Blijf experimenteren en verkennen om je kennis verder uit te breiden.\n" +
+        "Veel goede moed gekregen voor de realisatiefase van het final product.\n" +
+        "Houd de goede moed die je hebt gekregen voor de realisatiefase van het uiteindelijke product vast. Gebruik dit als motivatie om vol vertrouwen verder te gaan.",
+    stop: "Backlog was te onduidelijk dus deze moet ik opnieuw gaan opstellen.\n" +
+        "Erken dat een onduidelijke backlog een negatieve invloed had. Streef naar het opstellen van een duidelijke en gestructureerde backlog om de communicatie en het begrip te verbeteren.",
+    start: "Heroverwegen en verbeteren van de backlog-structuur en inhoud.\n" +
+        "Begin met het heroverwegen en verbeteren van de structuur en inhoud van de backlog. Zorg ervoor dat de backlog duidelijk en begrijpelijk is voor alle teamleden.",
     date: "20-04-2023",
-  }
+  },
 ];
 
 const projects = [

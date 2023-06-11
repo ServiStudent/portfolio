@@ -12,6 +12,7 @@ import {
   StarsCanvas,
     Documents,
 } from "./components";
+import Evaluatie from "./components/Evaluatie.jsx";
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
         <Works />
         <Feedbacks />
        <Documents/>
-
+        <Evaluatie/>
         <Contact/>
       </div>
     </BrowserRouter>
