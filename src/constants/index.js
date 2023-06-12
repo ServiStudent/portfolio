@@ -780,6 +780,28 @@ const projects = [
     image: placeholder,
     source_code_link: "https://github.com/",
     video: demo_orbit_package_poc
+  },  {
+    name: "Final product v0.1",
+    description:
+        "Een eerste unfinished versie van mijn final product genaamd Orbit.\n" +
+        "Video: In de video zie je een package met daarin de eerste basisfunctionaliteiten verwerkt. Deze package is geimplementeerd in een applicatie die Scrumble heeft ontwikkeld om aan te tonen dat het te installeren valt binnen een bestaande context.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Laravel",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Redis",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: placeholder,
+    source_code_link: "https://github.com/",
+    video: demo_final_v0,
   },
 ];
 const documents = [
@@ -904,6 +926,89 @@ const documents = [
     ],
     file: o_specifieke_eisen,
   },
+  {
+    name: "Toelichting Cursussen",
+    description:
+        "Tijdens de analyse- en vooronderzoeksfase waren cursussen een belangrijk onderdeel. Dit was relevant omdat ik hierdoor kan leren werken op de manier van Scrumble en aan kwaliteitseisen kan voldoen. Ook was het belangrijk om de werkwijze van Scrumble eigen te maken en te leren werken met de technieken die zij gebruiken, omdat de applicatie die uiteindelijk opgeleverd wordt, moet voldoen aan hun kwaliteitseisen. Daarnaast is het volgens Scrumble belangrijk om een diepere kennisbasis te hebben van de context voordat je daadwerkelijk begint met realiseren om zo efficiënt mogelijk te werken.",
+    tags: [
+      {
+        name: "analyse",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "implementatie",
+        color: "green-text-gradient",
+      },
+      {
+        name: "done",
+        color: "pink-text-gradient",
+      },
+    ],
+    file: t_cursussen,
+  },
+  {
+    name: "Toelichting affiniteit krijgen baseproject ",
+    description:
+        "Tijdens de analyse- en vooronderzoeksfase was het eigen maken van de Scrumble werkwijze een belangrijk onderdeel. Een van de zaken waar ik affiniteit mee moet krijgen is het basisproject genaamd Supercharge. Supercharge is een project wat door de jaren dat Scrumble bestaat heen gebouwd is. Hierdoor kan Scrumble elke applicatie bouwen vanaf een bepaalde basis, waar iedereen binnen het bedrijf mee bekend is. Mijn applicatie moet een connectie maken met de applicaties die zijn voortgebouwd op dit basisproject. Daarom is het relevant dat ik affiniteit krijg met het basisproject.\n" +
+        "Om te weten hoe de huidige applicaties met jobs en queues omgaan, moet ik affiniteit krijgen met Supercharge. Een van de grootste doelstellingen is ontdekken hoe mijn applicatie gaat interacteren met applicaties die gebouwd zijn op Supercharge, zodat ik vanuit daar weer een proof of concept kan ontwikkelen met hoe de interactie tussen de 2 gerealiseerd kan worden.",
+    tags: [
+      {
+        name: "analyse",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "implementatie",
+        color: "green-text-gradient",
+      },
+      {
+        name: "done",
+        color: "pink-text-gradient",
+      },
+    ],
+    file: t_affiniteit,
+  },
+  {
+    name: "Toelichting Proof of concepts",
+    description:
+        "De validatiefase is eigenlijk een verlengstuk van de analysefase. Tijdens deze validatiefase controleer ik, door middel van proof of concepts, of wat ik van plan ben te realiseren op basis van de requirements ook haalbaar is. Hieruit komt een advies richting mij als developer waarin aangegeven staat welke van de initiële requirements haalbaar zijn en welke niet. Bij degene die haalbaar zijn koppel ik terug naar bewijslast waarom deze haalbaar zijn. Bij degene die niet haalbaar zijn koppel ik terug naar bewijslast waaruit blijkt dat deze niet haalbaar zijn.",
+    tags: [
+      {
+        name: "analyse",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "implementatie",
+        color: "green-text-gradient",
+      },
+      {
+        name: "done",
+        color: "pink-text-gradient",
+      },
+    ],
+    file: t_poc,
+  },
+  {
+    name: "Toelichting Ontwerpen",
+    description:
+        "Door middel van verschillende ontwerptechnieken wil ik op visuele wijze een duidelijk beeld geven van de volgende zaken: Waar staat Orbit gepositioneerd binnen de workflow van Scrumble? Wat is de workflow van Orbit zelf? Hoe is de databasestructuur van Orbit opgebouwd? Met gebruik van welke software architectuur is Orbit gebouwd?\n" +
+        "Door middel van het beantwoorden van deze vragen met zowel ontwerptekeningen als tekstuele uitleg wil ik meer context bieden aan lezers.",
+    tags: [
+      {
+        name: "analyse",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ontwerp",
+        color: "green-text-gradient",
+      },
+      {
+        name: "done",
+        color: "pink-text-gradient",
+      },
+    ],
+    file: t_ontwerp,
+  },
+
 ];
 
 export { services, technologies, experiences, retrospectives, projects, documents };
