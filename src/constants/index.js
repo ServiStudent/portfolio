@@ -46,15 +46,6 @@ import number18 from '../assets/18.png';
 import number19 from '../assets/19.png';
 import number20 from '../assets/20.png';
 import number21 from '../assets/21.png';
-import number22 from '../assets/22.png';
-import number23 from '../assets/23.png';
-import number24 from '../assets/24.png';
-import number25 from '../assets/25.png';
-import number26 from '../assets/26.png';
-import number27 from '../assets/27.png';
-import number28 from '../assets/28.png';
-import number29 from '../assets/29.png';
-import number30 from '../assets/30.png';
 import placeholder from '../assets/jk-placeholder-image.png';
 
 import projectplan from '../assets/documents/projectplan.docx.pdf';
@@ -74,7 +65,7 @@ import demo_redis_raw from '../assets/videos/demo-redis-raw.mp4';
 import demo_redis_query_speed from '../assets/videos/demo-redis-query-speed.mp4';
 import demo_redis_retry_poc from '../assets/videos/demo-redis-retry-poc.mp4';
 import demo_orbit_package_poc from '../assets/videos/demo-orbit-package-poc.mp4';
-
+import demo_final_v0 from '../assets/videos/demo-final-v0.mp4';
 
 
 export const navLinks = [
@@ -441,28 +432,16 @@ const experiences = [
     ],
     video: demo_orbit_package_poc
   },
+  // {
+  //   icon: warning,
+  //   description: "De adviesfase geeft vanuit de voorgaande fases een aantal handvaten om mee te werken in de realisatiefase. Hierbij kun je denken aan het aangeven welke eigen logica er gerealiseerd moet worden, wat er vanuit Laravel Horizon hergebruikt gaat worden en wat er aangepast moet worden. Dit advies wordt zowel geuit naar de opdrachtgever als naar de developer van de package (In dit geval ben ik dat dus).",
+  //   phase: "Adviesfase",
+  //   points: [
+  //     "Adviesdocumenten: Er zijn verschillende adviesdocumenten geschreven over herbruikbare functionaliteiten of bijvoorbeeld zelf te schrijven functionaliteiten. Je zult de documenten hieronder in de tijdlijn terugvinden.",
+  //     "Ontwerpschetsen: Er zijn verschillende ontwerpen gemaakt. Je kunt hierbij denken aan grove UI schetsen tot aan een positioneringsontwerp. Je zult de documenten hieronder in de tijdlijn terugvinden.",
+  //   ],
+  // },
   {
-    icon: warning,
-    description: "De adviesfase geeft vanuit de voorgaande fases een aantal handvaten om mee te werken in de realisatiefase. Hierbij kun je denken aan het aangeven welke eigen logica er gerealiseerd moet worden, wat er vanuit Laravel Horizon hergebruikt gaat worden en wat er aangepast moet worden. Dit advies wordt zowel geuit naar de opdrachtgever als naar de developer van de package (In dit geval ben ik dat dus).",
-    phase: "Adviesfase",
-    points: [
-      "Adviesdocumenten: Er zijn verschillende adviesdocumenten geschreven over herbruikbare functionaliteiten of bijvoorbeeld zelf te schrijven functionaliteiten. Je zult de documenten hieronder in de tijdlijn terugvinden.",
-      "Ontwerpschetsen: Er zijn verschillende ontwerpen gemaakt. Je kunt hierbij denken aan grove UI schetsen tot aan een positioneringsontwerp. Je zult de documenten hieronder in de tijdlijn terugvinden.",
-    ],
-  },
-  {
-    title: "Adviesdocument: Veranderen van Laravel Horizon 'Job Payload' [Bestand komt nog]",
-    company_name: "Advies",
-    icon: number19,
-    iconBg: "#383E56",
-    date: "Juni 2023",
-    points: [
-      "Om optimale performance te waarborgen breng ik een advies uit over het veranderen van de Job Payload vanuit Laravel Horizon.",
-      "Dit adviesrapport omvat tevens adviezen over de onderhoudbaarheid.",
-        "Bestand komt nog"
-    ],
-    // file: a_job_payload,
-  },{
     title: "Ontwerpdocument: workflows usecases",
     company_name: "Advies",
     icon: number19,
@@ -479,36 +458,24 @@ const experiences = [
     description: "Tijdens de realisatiefase wordt er met inachtneming van alle voorgaande fases een applicatie ontwikkeld om de doelstellingen van deze opdracht te vervullen. Vastgesteld is dat het volledig afmaken van deze applicatie niet gaat lukken. Om de opdracht op professionele wijze af te sluiten heb ik met mijn opdrachtgever gesproken over het doorontwikkelen en afspraken gemaakt voor deze doorontwikkeling.",
     phase: "Realisatiefase",
     points: [
-      "Final products: Je zult hieronder in de tijdlijn een final product zien met een demo. Dit final product is een versie 0, ofwel een versie die niet gereleased gaat worden.",
-        "Testresultaten: Het final product moet nog getest worden, dit zal gaan doormiddel van usertesting. De beoogde eindgebruikers gaan ontworpen usecases doorlopen en geven feedback door middel van een excelsheet. Deze feedback wordt uiteindelijk verwerkt in een volgende versie van de applicatie.",
+      "Final product: Je zult hieronder in de tijdlijn een final product zien met een demo. Dit final product is een versie 0, ofwel een versie die niet gereleased gaat worden omdat deze nog niet volledig is. Zie volgende stap 'Afronding stage' voor uitleg.",
     ],
   },
   {
-    title: "Orbit - Final product v0.1 [Demo komt nog]",
+    title: "Orbit - Final product v0.1",
     company_name: "Workshop",
     icon: number20,
     iconBg: "#383E56",
     date: "Juni 2023",
     points: [
       "Een eerste unfinished versie van mijn final product genaamd Orbit.",
-      "Video: [Video komt nog] In de video zie je een package met daarin de eerste basisfunctionaliteiten verwerkt.",
+      "Video: In de video zie je een package met daarin de eerste basisfunctionaliteiten verwerkt. Deze package is geimplementeerd in een applicatie die Scrumble heeft ontwikkeld om aan te tonen dat het te installeren valt binnen een bestaande context.",
     ],
-    // video: demo_orbit_final_v_0,
-  },
-  {
-    title: "Testresultaten: Orbit - Final product v0.1 [Document komt nog]",
-    company_name: "Workshop",
-    icon: number21,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Validatiefase van eerste versie van Orbit.",
-      "Document komt nog.",
-    ],
+    video: demo_final_v0,
   },
   {
     icon: warning,
-    description: "Ik heb met de opdrachtgever afgesproken om het systeem indien dit niet compleet afgerond is, verder door te ontwikkelen. Hiervoor hebben we professionele afspraken gemaakt en hebben we een definition of done vastgesteld. Definition of done:",
+    description: "Ik heb met de opdrachtgever afgesproken om het systeem indien dit niet compleet afgerond is, verder door te ontwikkelen. Hiervoor hebben we professionele afspraken gemaakt en hebben we een definition of done vastgesteld. (Deze taken dienen dus niet aan het einde van de stageperiode af te zijn, maar kunnen ook na de stageperiode verder ontwikkeld worden) Definition of done:",
     phase: "Afronding stage",
     points: [
       "Een composer package die geïmporteerd kan worden in projecten die draaien op Laravel 9 of 10.",
